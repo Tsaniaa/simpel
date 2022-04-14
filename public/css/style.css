@@ -1,0 +1,93 @@
+/* body{
+  font-size: 100%;
+}
+header{
+  background-color: #274472;
+}
+
+.border, .col-auto, .list-group-item{
+  background-color: #41729F;
+  color: #274472;
+}
+
+.list-group-item:hover, .nav-link:hover, .border:hover{
+  background-color: #274472;
+  color: #DED93E ;
+}
+
+.nav-link, .rounded-circle, .card, .table{
+  color: #274472;
+}
+
+header .d-block{
+  color: #C3E0E5;
+}
+
+.navbar-title {
+  font-family: 'Anton', sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+    font-weight: 700;
+    color: #DED93E;
+}
+
+header .d-block:hover{
+  color: #DED93E;
+}
+
+h2{
+    font-size: 20px;
+    font-weight: 700;
+    color: #DED93E;
+}
+
+.card-header {
+  background-color: #274472;
+} */
+
+body{
+  font-size: 100%;
+}
+header{
+  background-color: #518459;
+}
+
+.border, .col-auto, .list-group-item{
+  background-color: white;
+  color: #518459;
+}
+
+.list-group-item:hover, .nav-link:hover, .border:hover{
+  background-color: #518459;
+  color: #C3E0E5;
+}
+
+.nav-link, .rounded-circle, .card, .table{
+  color: #518459;
+}
+
+header .d-block{
+  color: #C3E0E5;
+}
+
+.navbar-title {
+  font-family: 'Anton', sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+    font-weight: 700;
+    color: #DED93E;
+}
+
+header .d-block:hover{
+  color: #DED93E;
+}
+
+h2{
+    font-size: 20px;
+    font-weight: 700;
+    color: #DED93E;
+}
+
+.card-header {
+  background-color: #518459;
+}
