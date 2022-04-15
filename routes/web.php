@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardPenelitianController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,13 +22,13 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/data', function () {
-    return view('data', [
-        "title" => "Data Pengumuman",
-        "name" => "Tsania Ursila Razani",
-        "email" => "tsaniashella@it.student.pens.ac.id"
-    ]);
-});
+
+Route::get('/data', [DashboardPenelitianController::class, 'index']);
+Route::get('/data/{penelitian:id}', [DashboardPenelitianController::class, 'show']);
+
+
+
+
 
 Route::get('/pengumuman', function () {
     return view('announcement', [
