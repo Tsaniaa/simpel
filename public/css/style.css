@@ -47,12 +47,13 @@ h2{
 
 body{
   font-size: 100%;
+  padding-top: 3.5rem;
 }
 
 a, a:hover{
   text-decoration: none;
 }
-header{
+.navbar{
   background-color: #518459;
 }
 
@@ -81,7 +82,7 @@ header{
   color: #518459;
 }
 
-header .d-block{
+.navbar .d-block{
   color: #C3E0E5;
 }
 
@@ -93,7 +94,7 @@ header .d-block{
     color: #DED93E;
 }
 
-header .d-block:hover{
+.navbar .d-block:hover{
   color: #DED93E;
 }
 

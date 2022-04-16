@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="row flex-grow-0">
             <div class="col-auto px-0">
-                <div id="sidebar" class="collapse collapse-horizontal show border-end text-decoration-none min-vh-100">
+                <div id="sidebar" class="collapse collapse-horizontal show text-decoration-none">
                     <div id="sidebar-nav" class="list-group border-0 rounded-0 text-sm-start ">
                         <a href="/" class="list-group-item border-end-0 d-inline-block text-truncate {{ ($title === "graphic") ? 'active' : '' }}" data-bs-parent="#sidebar"><i class="fa-solid fa-house me-2"></i><span class="ms-1 d-none d-sm-inline">Beranda</span></a>
                         <a href="/data" class="list-group-item border-end-0 d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="fa fa-th-list me-2"></i><span class="ms-1 d-none d-sm-inline">Data Penelitian</span></a>
@@ -21,11 +21,11 @@
                 </div>
             </div>
             <div class="col">
-                <div class="row">
-                    <div class="page-header pt-3 mt-2">
+              <div class="row">
+                    <div class="page-header pt-4">
                         <a href="#" data-bs-target="#sidebar" data-bs-toggle="collapse" class="border rounded-3 p-1 text-decoration-none"><i class="fa fa-bars"></i> menu</a>
                     </div>
-                    <div class="col-12">
+                    <div class="col-md-12">
                         @yield('content')
                     </div>
                 </div>

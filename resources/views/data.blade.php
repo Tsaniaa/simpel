@@ -8,6 +8,7 @@
                         <h2>Data Penelitian PENS</h2>
                     </div>
                     <div class="card-body">
+                      <div class="table-responsive">
                         <table class="table" id="sortTable">
                             <thead>
                               <tr>
@@ -47,6 +48,7 @@
                               
                             </tbody>
                           </table>  
+                      </div>
                     </div>
                 </div>
             </div>
