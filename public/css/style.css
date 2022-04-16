@@ -48,6 +48,10 @@ h2{
 body{
   font-size: 100%;
 }
+
+a, a:hover{
+  text-decoration: none;
+}
 header{
   background-color: #518459;
 }
@@ -57,9 +61,20 @@ header{
   color: #518459;
 }
 
-.list-group-item:hover, .nav-link:hover, .border:hover{
+.list-group-item:hover, .nav-link:hover, .border:hover, .btn-info:hover, .btn-info a:hover{
   background-color: #518459;
   color: #C3E0E5;
+}
+
+.btn-info, .btn-info a{
+  background-color: #518459;
+  color: #DED93E;
+}
+
+.btn-info, .btn-info a{
+  border-color: #518459;
+  background-color: transparent;
+  color: #518459;
 }
 
 .nav-link, .rounded-circle, .card, .table{

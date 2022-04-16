@@ -1,10 +1,5 @@
 <header class="py-3 shadow">
     <div class="container align-items-center d-flex">
-        <div class="flex-shrink-1">
-            <a href="#" class="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 link-dark text-decoration-none">
-                <i class="bi bi-bootstrap fs-2 text-dark"></i>
-            </a>
-        </div>
         <div class="flex-grow-1 d-flex align-items-center">
             <div class="navbar-title me-3">SIMPEL</div>
             <form class="w-100 me-3">
