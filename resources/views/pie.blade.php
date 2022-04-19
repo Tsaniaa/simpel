@@ -1,10 +1,9 @@
 @extends('layouts.main')
-
 @section('content')
     <h3>Jumlah Penelitian = {{ $jumlah }}</h3>
+    <button><a href="/">bar chart</a></button>
 
     {{-- convert data ke array --}}
-    <button><a href="/pie">Pie chart</a></button>
     <?php 
         $jml = array();
         $thn = array();
@@ -13,7 +12,6 @@
             array_push($thn, $data->tahun);
         }
         array_push($jml,0);
-
     ?>
 
     {{-- Start buat Bar chart --}}
@@ -22,7 +20,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
         {{-- identifikasi chart --}}
-        <canvas id="myChart" width="300" height="100"></canvas>
+        <canvas id="myChart" width="50" height="50"></canvas>
 
 
         {{-- proses --}}
@@ -35,27 +33,24 @@
             const data = {
                 labels: labels,
                 datasets: [{
-                    label: 'Total Penelitian',
+                    label: 'My First Dataset',
                     data: jumlah,
                     backgroundColor: [
-    
-                    'rgb(40, 178, 170)',
+                    'rgb(255, 99, 132)',
+                    'rgb(220,20,60)',
+                    'rgb(54, 162, 235)',
+                    'rgb(255, 205, 86)',
+                    'rgb(34, 139, 35)',
+                    'rgb(30, 144, 255)',
+                    'rgb(60, 179, 113)',
                     ],
-
-                    borderWidth: 1
+                    hoverOffset: 4
                 }]
             };
 
             const config = {
-                type: 'bar',
+                type: 'pie',
                 data: data,
-                options: {
-                    scales: {
-                        y:{
-                            beginAtZero: true
-                        }
-                    }
-                }
             };
 
             const myChart = new Chart(
@@ -63,4 +58,9 @@
                 config
             );
         </script>
+
+
+
+
+
 @endsection

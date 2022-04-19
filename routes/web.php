@@ -14,13 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home', [
-        "title" => "Beranda",
-        "name" => "Tsania Ursila Razani",
-        "email" => "tsaniashella@it.student.pens.ac.id"
-    ]);
-});
+Route::get('/', [DashboardPenelitianController::class, 'graphic']);
+Route::get('/pie', [DashboardPenelitianController::class, 'pieGraphic']);
 
 
 Route::get('/data', [DashboardPenelitianController::class, 'index']);

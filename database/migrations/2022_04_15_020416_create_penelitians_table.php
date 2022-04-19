@@ -29,7 +29,8 @@ return new class extends Migration
             $table->string('lama_kgtn');
             $table->string('thn_pekerjaan');
             $table->string('grp_riset');
-            $table->date('thn_penelitian');
+            $table->date('tanggal');
+            $table->string('tahun');
             $table->timestamps();
         });
     }

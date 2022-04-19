@@ -6,6 +6,7 @@ use App\Models\Dosen;
 use App\Models\Prodi;
 use App\Models\Skema;
 use App\Models\Penelitian;
+use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
@@ -70,7 +71,7 @@ class DatabaseSeeder extends Seeder
         Penelitian::create([
             "dosen_id" => 1,
             "skema_id" => 1,
-            "judul" => "Perancangan Sistem Informasi Manajemen Rumah Sakit Berbasis Web",
+            "judul" => "Perancangan Sistem halo Manajemen Rumah Sakit Berbasis Web",
             "rumpun_ilmu" => "Rekayasa Perangkat Lunak",
             "abstrak" => "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti inventore quibusdam reprehenderit fugit dignissimos explicabo, dolor veritatis exercitationem perferendis? Reiciendis, eos aspernatur assumenda fugiat molestiae ducimus dicta ab iste, voluptate obcaecati perspiciatis dignissimos nemo enim eum repudiandae vitae, delectus quas harum ullam iusto repellat sed aut maiores aperiam. Quas, aut?",
             "keyword" => "Kepuasan",
@@ -82,7 +83,8 @@ class DatabaseSeeder extends Seeder
             "lama_kgtn" => "1 tahun",
             "thn_pekerjaan" => "ke-1",
             "grp_riset" => "rekayasa perangkat lunak",
-            "thn_penelitian" => '2020/12/1',
+            "tanggal" => Carbon::parse('2020-01-10'),
+            "tahun" => Carbon::parse('2020-01-10')->format('Y'),
         ]);
         Penelitian::create([
             "dosen_id" => 1,
@@ -99,7 +101,8 @@ class DatabaseSeeder extends Seeder
             "lama_kgtn" => "1 tahun",
             "thn_pekerjaan" => "ke-1",
             "grp_riset" => "rekayasa perangkat lunak",
-            "thn_penelitian" => '2018/8/4',
+            "tanggal" => Carbon::parse('2019-01-10'),
+            "tahun" => Carbon::parse('2019-01-10')->format('Y'),
         ]);
         Penelitian::create([
             "dosen_id" => 2,
@@ -116,7 +119,8 @@ class DatabaseSeeder extends Seeder
             "lama_kgtn" => "1 tahun",
             "thn_pekerjaan" => "ke-1",
             "grp_riset" => "rekayasa perangkat lunak",
-            "thn_penelitian" => '2020/8/4',
+            "tanggal" => Carbon::parse('2021-01-10'),
+            "tahun" => Carbon::parse('2021-01-10')->format('Y'),
         ]);
         Penelitian::create([
             "dosen_id" => 2,
@@ -133,7 +137,8 @@ class DatabaseSeeder extends Seeder
             "lama_kgtn" => "1 tahun",
             "thn_pekerjaan" => "ke-1",
             "grp_riset" => "rekayasa perangkat lunak",
-            "thn_penelitian" => '2021/2/6',
+            "tanggal" => Carbon::parse('2022-01-10'),
+            "tahun" => Carbon::parse('2022-01-10')->format('Y'),
         ]);
         Penelitian::create([
             "dosen_id" => 3,
@@ -150,7 +155,8 @@ class DatabaseSeeder extends Seeder
             "lama_kgtn" => "1 tahun",
             "thn_pekerjaan" => "ke-1",
             "grp_riset" => "rekayasa perangkat lunak",
-            "thn_penelitian" => '2019/4/1',
+            "tanggal" => Carbon::parse('2019-01-10'),
+            "tahun" => Carbon::parse('2019-01-10')->format('Y'),
         ]);
         Penelitian::create([
             "dosen_id" => 3,
@@ -167,7 +173,8 @@ class DatabaseSeeder extends Seeder
             "lama_kgtn" => "1 tahun",
             "thn_pekerjaan" => "ke-1",
             "grp_riset" => "rekayasa perangkat lunak",
-            "thn_penelitian" => '2022/1/3',
+            "tanggal" => Carbon::parse('2020-01-10'),
+            "tahun" => Carbon::parse('2020-01-12')->format('Y'),
         ]);
         Penelitian::create([
             "dosen_id" => 1,
@@ -184,7 +191,8 @@ class DatabaseSeeder extends Seeder
             "lama_kgtn" => "1 tahun",
             "thn_pekerjaan" => "ke-1",
             "grp_riset" => "rekayasa perangkat lunak",
-            "thn_penelitian" => '2022/1/3',
+            "tanggal" => Carbon::parse('2022-01-10'),
+            "tahun" => Carbon::parse('2022-01-10')->format('Y'),
         ]);
         Penelitian::create([
             "dosen_id" => 2,
@@ -201,7 +209,8 @@ class DatabaseSeeder extends Seeder
             "lama_kgtn" => "1 tahun",
             "thn_pekerjaan" => "ke-1",
             "grp_riset" => "rekayasa perangkat lunak",
-            "thn_penelitian" => '2022/1/3',
+            "tanggal" => Carbon::parse('2020-02-10'),
+            "tahun" => Carbon::parse('2020-01-10')->format('Y'),
         ]);
         Penelitian::create([
             "dosen_id" => 3,
@@ -218,7 +227,8 @@ class DatabaseSeeder extends Seeder
             "lama_kgtn" => "1 tahun",
             "thn_pekerjaan" => "ke-1",
             "grp_riset" => "rekayasa perangkat lunak",
-            "thn_penelitian" => '2022/1/3',
+            "tanggal" => Carbon::parse('2021-01-10'),
+            "tahun" => Carbon::parse('2021-01-10')->format('Y'),
         ]);
         Penelitian::create([
             "dosen_id" => 1,
@@ -235,7 +245,8 @@ class DatabaseSeeder extends Seeder
             "lama_kgtn" => "1 tahun",
             "thn_pekerjaan" => "ke-1",
             "grp_riset" => "rekayasa perangkat lunak",
-            "thn_penelitian" => '2022/1/3',
+            "tanggal" => Carbon::parse('2020-01-10'),
+            "tahun" => Carbon::parse('2020-01-10')->format('Y'),
         ]);
         Penelitian::create([
             "dosen_id" => 2,
@@ -252,7 +263,8 @@ class DatabaseSeeder extends Seeder
             "lama_kgtn" => "1 tahun",
             "thn_pekerjaan" => "ke-1",
             "grp_riset" => "rekayasa perangkat lunak",
-            "thn_penelitian" => '2022/1/3',
+            "tanggal" => Carbon::parse('2022-01-10'),
+            "tahun" => Carbon::parse('2022-01-10')->format('Y'),
         ]);
     }
 }
