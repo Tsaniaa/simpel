@@ -9,15 +9,15 @@
                     </div>
                     <div class="card-body">
                       <div class="table-responsive">
-                        <table class="table" id="sortTable">
+                        <table id="dtOrderExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
                             <thead>
                               <tr>
-                                <th scope="col">NO</th>
-                                <th scope="col">JUDUL</th>
-                                <th scope="col">SKEMA</th>
-                                <th scope="col">DOSEN</th>
-                                <th scope="col">TAHUN</th>
-                                <th scope="col">DETAIL</th>
+                                <th class="th-sm">NO</th>
+                                <th class="th-sm">JUDUL</th>
+                                <th class="th-sm">SKEMA</th>
+                                <th class="th-sm">DOSEN</th>
+                                <th class="th-sm">TAHUN</th>
+                                <th class="th-sm">DETAIL</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -31,7 +31,7 @@
                                         <td><div class="btn btn-sm" style="border-color:{{ ($penelitian->skema->nama === "Dasar") ? 'red' : 'green'}}; color: {{ ($penelitian->skema->nama === "Dasar") ? 'red' : 'green'}}; weight: bold;">{{ $penelitian->skema->nama }}</div></td>
                                         <td>{{ $penelitian->dosen->nama }} </td>
                                         <td>{{  $penelitian->tahun }}</td>
-                                        <td class="text-center">
+                                        <td class="text-center" >
                                             {{-- <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="#" method="POST"> --}}
                                                 <a href="/data/{{ $penelitian->id }}" class="btn btn-sm btn-success"><i class="fa fa-external-link"></i></a>
                                             {{-- </form> --}}
