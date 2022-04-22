@@ -18,9 +18,16 @@
             <tbody>
                 <tr style="background-color: #D4F1F4;">
                     <td>{{ $penelitian->skema->nama }}</td>
-                    <td>{{ $penelitian->dosen->nama }}</td>
+                    <td>
+                        <ul>
+                            @foreach ($penelitian->dosen as $dosen)
+                                <li>{{ $dosen->nama }}</li>
+                            @endforeach
+                        </ul>
+                    </td>
+                    {{-- <td>{{ $penelitian->dosen->nama }}</td> --}}
                     <td>{{ $penelitian->grp_riset }}</td>
-                    <td>{{ $penelitian->thn_penelitian }}</td>
+                    <td>{{ $penelitian->tahun }}</td>
                     <td>{{ $penelitian->lama_kgtn }}</td>
                     <td>{{ $penelitian->thn_pekerjaan }}</td>
                 </tr>               
@@ -40,7 +47,7 @@
                 </tr>
                 <tr>
                     <td class="table-active"><b>Abstrak</b></td>
-                    <td>{{ $penelitian->abstract }}</td>
+                    <td>{{ $penelitian->abstrak }}</td>
                 </tr>
                 <tr>
                     <td class="table-active"><b>Keyword</b></td>
