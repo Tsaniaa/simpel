@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Dosen extends Model
 {
     use HasFactory;
+    
     protected $guarded = ['id'];
 
     public function prodi()
@@ -19,6 +20,6 @@ class Dosen extends Model
 
     public function penelitian()
     {
-        return $this->hasMany(Penelitian::class);
+        return $this->belongsToMany(Penelitian::class);
     }
 }

@@ -15,7 +15,7 @@ class Penelitian extends Model
 
     public function dosen()
     {
-        return $this->belongsTo(Dosen::class);
+        return $this->belongsToMany(Dosen::class);
     }
 
     public function skema()

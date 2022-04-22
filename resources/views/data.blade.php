@@ -29,7 +29,14 @@
                                         <td> nomor </td>
                                         <td>{{ $penelitian->judul }}</td>                                        
                                         <td><div class="btn btn-sm" style="border-color:{{ ($penelitian->skema->nama === "Dasar") ? 'red' : 'green'}}; color: {{ ($penelitian->skema->nama === "Dasar") ? 'red' : 'green'}}; weight: bold;">{{ $penelitian->skema->nama }}</div></td>
-                                        <td>{{ $penelitian->dosen->nama }} </td>
+                                        <td>
+                                          <ul>
+                                            @foreach ($penelitian->dosen as $dosen)
+                                                <li>{{ $dosen->nama }}</li>
+                                            @endforeach
+                                          </ul>
+                                          {{-- {{ $penelitian->dosen->nama }}  --}}
+                                        </td>
                                         <td>{{  $penelitian->tahun }}</td>
                                         <td class="text-center" >
                                             {{-- <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="#" method="POST"> --}}

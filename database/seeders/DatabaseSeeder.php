@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Dosen;
+use App\Models\DosenPenelitian;
 use App\Models\Prodi;
 use App\Models\Skema;
 use App\Models\Penelitian;
@@ -69,7 +70,7 @@ class DatabaseSeeder extends Seeder
             "nama" => "PLP",
         ]);
         Penelitian::create([
-            "dosen_id" => 1,
+            // "dosen_id" => 1,
             "skema_id" => 1,
             "judul" => "Perancangan Sistem halo Manajemen Rumah Sakit Berbasis Web",
             "rumpun_ilmu" => "Rekayasa Perangkat Lunak",
@@ -87,7 +88,7 @@ class DatabaseSeeder extends Seeder
             "tahun" => Carbon::parse('2020-01-10')->format('Y'),
         ]);
         Penelitian::create([
-            "dosen_id" => 1,
+            // "dosen_id" => 1,
             "skema_id" => 2,
             "judul" => "Rancang Bangun Aplikasi Alat Musik Kolintang Menggunakan Augmented Reality Berbasis Android",
             "rumpun_ilmu" => "Rekayasa Perangkat Lunak",
@@ -105,7 +106,7 @@ class DatabaseSeeder extends Seeder
             "tahun" => Carbon::parse('2019-01-10')->format('Y'),
         ]);
         Penelitian::create([
-            "dosen_id" => 2,
+            // "dosen_id" => 2,
             "skema_id" => 3,
             "judul" => "Pemetaan Daerah Ancaman Tanah Longsor di Kota Manado",
             "rumpun_ilmu" => "Rekayasa Perangkat Lunak",
@@ -123,7 +124,7 @@ class DatabaseSeeder extends Seeder
             "tahun" => Carbon::parse('2021-01-10')->format('Y'),
         ]);
         Penelitian::create([
-            "dosen_id" => 2,
+            // "dosen_id" => 2,
             "skema_id" => 4,
             "judul" => "Rancang Bangun Aplikasi Bimbingan Dosen Wali Secara Online",
             "rumpun_ilmu" => "Rekayasa Perangkat Lunak",
@@ -141,7 +142,7 @@ class DatabaseSeeder extends Seeder
             "tahun" => Carbon::parse('2022-01-10')->format('Y'),
         ]);
         Penelitian::create([
-            "dosen_id" => 3,
+            // "dosen_id" => 3,
             "skema_id" => 1,
             "judul" => "Alat Peraga Digital Pengenalan Pahlawan Sulawesi Utara",
             "rumpun_ilmu" => "Rekayasa Perangkat Lunak",
@@ -159,7 +160,7 @@ class DatabaseSeeder extends Seeder
             "tahun" => Carbon::parse('2019-01-10')->format('Y'),
         ]);
         Penelitian::create([
-            "dosen_id" => 3,
+            // "dosen_id" => 3,
             "skema_id" => 1,
             "judul" => "Perancangan Aplikasi Web Berbasis Usability",
             "rumpun_ilmu" => "Rekayasa Perangkat Lunak",
@@ -177,7 +178,7 @@ class DatabaseSeeder extends Seeder
             "tahun" => Carbon::parse('2020-01-12')->format('Y'),
         ]);
         Penelitian::create([
-            "dosen_id" => 1,
+            // "dosen_id" => 1,
             "skema_id" => 2,
             "judul" => "Aplikasi Agenda Berbasis Android Dengan Fitur Push Notification Dan Reminder",
             "rumpun_ilmu" => "Rekayasa Perangkat Lunak",
@@ -195,7 +196,7 @@ class DatabaseSeeder extends Seeder
             "tahun" => Carbon::parse('2022-01-10')->format('Y'),
         ]);
         Penelitian::create([
-            "dosen_id" => 2,
+            // "dosen_id" => 2,
             "skema_id" => 3,
             "judul" => "Mendeteksi Keakuratan Metode Noise Salt And Pepper Dengan Median Filter",
             "rumpun_ilmu" => "Rekayasa Perangkat Lunak",
@@ -213,7 +214,7 @@ class DatabaseSeeder extends Seeder
             "tahun" => Carbon::parse('2020-01-10')->format('Y'),
         ]);
         Penelitian::create([
-            "dosen_id" => 3,
+            // "dosen_id" => 3,
             "skema_id" => 1,
             "judul" => "Pengembangan Aplikasi Modul Pembelajaran Desain Grafis Berbasis Android",
             "rumpun_ilmu" => "Rekayasa Perangkat Lunak",
@@ -231,7 +232,7 @@ class DatabaseSeeder extends Seeder
             "tahun" => Carbon::parse('2021-01-10')->format('Y'),
         ]);
         Penelitian::create([
-            "dosen_id" => 1,
+            // "dosen_id" => 1,
             "skema_id" => 2,
             "judul" => "Penerapan Metode Jaringan Syaraf Tiruan Pada Sistem Deteksi Citra Darah Manusia",
             "rumpun_ilmu" => "Rekayasa Perangkat Lunak",
@@ -249,7 +250,7 @@ class DatabaseSeeder extends Seeder
             "tahun" => Carbon::parse('2020-01-10')->format('Y'),
         ]);
         Penelitian::create([
-            "dosen_id" => 2,
+            // "dosen_id" => 2,
             "skema_id" => 3,
             "judul" => "Sistem Informasi Pemasaran Rumah Berbasis Web Gis",
             "rumpun_ilmu" => "Rekayasa Perangkat Lunak",
@@ -265,6 +266,112 @@ class DatabaseSeeder extends Seeder
             "grp_riset" => "rekayasa perangkat lunak",
             "tanggal" => Carbon::parse('2022-01-10'),
             "tahun" => Carbon::parse('2022-01-10')->format('Y'),
+        ]);
+        DosenPenelitian::create([
+            "dosen_id" => 1,
+            "penelitian_id" => 1,
+        ]);
+        DosenPenelitian::create([
+            "dosen_id" => 2,
+            "penelitian_id" => 1,
+        ]);
+        DosenPenelitian::create([
+            "dosen_id" => 3,
+            "penelitian_id" => 1,
+        ]);
+
+        DosenPenelitian::create([
+            "dosen_id" => 1,
+            "penelitian_id" => 2,
+        ]);
+        DosenPenelitian::create([
+            "dosen_id" => 2,
+            "penelitian_id" => 2,
+        ]);
+
+        DosenPenelitian::create([
+            "dosen_id" => 2,
+            "penelitian_id" => 3,
+        ]);
+        DosenPenelitian::create([
+            "dosen_id" => 3,
+            "penelitian_id" => 3,
+        ]);
+
+        DosenPenelitian::create([
+            "dosen_id" => 3,
+            "penelitian_id" => 4,
+        ]);
+        DosenPenelitian::create([
+            "dosen_id" => 1,
+            "penelitian_id" => 4,
+        ]);
+
+        DosenPenelitian::create([
+            "dosen_id" => 2,
+            "penelitian_id" => 5,
+        ]);
+        DosenPenelitian::create([
+            "dosen_id" => 3,
+            "penelitian_id" => 5,
+        ]);
+        DosenPenelitian::create([
+            "dosen_id" => 1,
+            "penelitian_id" => 5,
+        ]);
+
+        DosenPenelitian::create([
+            "dosen_id" => 1,
+            "penelitian_id" => 6,
+        ]);
+        DosenPenelitian::create([
+            "dosen_id" => 2,
+            "penelitian_id" => 6,
+        ]);
+
+        DosenPenelitian::create([
+            "dosen_id" => 3,
+            "penelitian_id" => 7,
+        ]);
+        DosenPenelitian::create([
+            "dosen_id" => 1,
+            "penelitian_id" => 7,
+        ]);
+
+        DosenPenelitian::create([
+            "dosen_id" => 1,
+            "penelitian_id" => 8,
+        ]);
+        DosenPenelitian::create([
+            "dosen_id" => 2,
+            "penelitian_id" => 8,
+        ]);
+
+        DosenPenelitian::create([
+            "dosen_id" => 2,
+            "penelitian_id" => 9,
+        ]);
+        DosenPenelitian::create([
+            "dosen_id" => 3,
+            "penelitian_id" => 9,
+        ]);
+
+        DosenPenelitian::create([
+            "dosen_id" => 1,
+            "penelitian_id" => 10,
+        ]);
+        DosenPenelitian::create([
+            "dosen_id" => 3,
+            "penelitian_id" => 10,
+        ]);
+
+        DosenPenelitian::create([
+            "dosen_id" => 1,
+            "penelitian_id" => 11,
+        ]);
+        DosenPenelitian::create([
+            "dosen_id" => 2,
+            "penelitian_id" => 11,
         ]);
     }
 }
