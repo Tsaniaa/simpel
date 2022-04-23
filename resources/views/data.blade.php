@@ -22,26 +22,40 @@
                             </thead>
                             <tbody>
                               @if ($penelitians->count() != 0)
+                              <?php $nomer = 1;?>
                                   @foreach ($penelitians as $penelitian)
 
-                                  {{-- <?php $tahun = substr($penelitian->thn_penelitian,0,4) ?> --}}
+                                    <?php
+                                      if ($penelitian->skema->nama === "Dasar") {
+                                        $border = 'rgb(213, 90, 90)';
+                                        $color = 'rgb(213, 90, 90)';
+                                      }elseif ($penelitian->skema->nama === "Terapan") {
+                                        $border = 'rgb(208, 122, 56)';
+                                        $color = 'rgb(208, 122, 56)';
+                                      }elseif ($penelitian->skema->nama === "Unggulan") {
+                                        $border = 'rgb(154, 213, 90)';
+                                        $color = 'rgb(154, 213, 90)';
+                                      }else {
+                                        $border = 'rgb(90, 197, 213)';
+                                        $color = 'rgb(90, 197, 213)';
+                                      }
+                                    ?>
+
+
                                     <tr>
-                                        <td> nomor </td>
+                                        <td> {{ $nomer++ }} </td>
                                         <td>{{ $penelitian->judul }}</td>                                        
-                                        <td><div class="btn btn-sm" style="border-color:{{ ($penelitian->skema->nama === "Dasar") ? 'red' : 'green'}}; color: {{ ($penelitian->skema->nama === "Dasar") ? 'red' : 'green'}}; weight: bold;">{{ $penelitian->skema->nama }}</div></td>
+                                        <td><div class="btn btn-sm" style="background-color:{{ $border }}; color: white; font-weight: bold;">{{ $penelitian->skema->nama }}</div></td>
                                         <td>
                                           <ul>
                                             @foreach ($penelitian->dosen as $dosen)
                                                 <li>{{ $dosen->nama }}</li>
                                             @endforeach
                                           </ul>
-                                          {{-- {{ $penelitian->dosen->nama }}  --}}
                                         </td>
                                         <td>{{  $penelitian->tahun }}</td>
                                         <td class="text-center" >
-                                            {{-- <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="#" method="POST"> --}}
                                                 <a href="/data/{{ $penelitian->id }}" class="btn btn-sm btn-success"><i class="fa fa-external-link"></i></a>
-                                            {{-- </form> --}}
                                         </td>
                                     </tr>
 

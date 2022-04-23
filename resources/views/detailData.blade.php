@@ -72,7 +72,7 @@
             </tbody>
         </table>
         <button class="btn-info me-2"><a href="/data"><i class="fa fa-arrow-left"></i> kembali</a></button>
-        <button class="btn-info"><a href="#"><i class="fa fa-download"></i> download abstract </a></button>
+        {{-- <button class="btn-info"><a href="#"><i class="fa fa-download"></i> download abstract </a></button> --}}
     </div>
 </div>
 

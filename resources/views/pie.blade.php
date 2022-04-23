@@ -9,6 +9,8 @@
             </div>
             <div class="card-body">
                 <button class="btn-info"><a href="/"><i class="fa fa-bar-chart me-2"></i>Bar chart</a></button>
+                <button class="btn-info"><a href="/barProdi"><i class="fa fa-pie-chart me-2"></i>grafik prodi</a></button>
+
                 <div class="shadow1">
                     <div class="content">                    
                     <center><div class="col-4 mb-2">
@@ -58,7 +60,7 @@
                                 };
                     
                                 const config = {
-                                    type: 'pie',
+                                    type: 'doughnut',
                                     data: data,
                                 };
                     

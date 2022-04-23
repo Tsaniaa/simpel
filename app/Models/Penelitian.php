@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Dosen;
+use App\Models\Prodi;
 use App\Models\Skema;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -21,5 +22,10 @@ class Penelitian extends Model
     public function skema()
     {
         return $this->belongsTo(Skema::class);
+    }
+
+    public function prodi()
+    {
+        return $this->belongsTo(Prodi::class);
     }
 }

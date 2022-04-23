@@ -28,6 +28,15 @@ class DatabaseSeeder extends Seeder
         Prodi::create([
             "nama" => "Teknik Komputer"
         ]);
+        // Prodi::create([
+        //     "nama" => "Teknik Elektronika"
+        // ]);
+        // Prodi::create([
+        //     "nama" => "Teknik Mekatronika"
+        // ]);
+        // Prodi::create([
+        //     "nama" => "Sistem Pembangkit Energi"
+        // ]);
 
         Dosen::create([
             "prodi_id" => 1,
@@ -70,9 +79,9 @@ class DatabaseSeeder extends Seeder
             "nama" => "PLP",
         ]);
         Penelitian::create([
-            // "dosen_id" => 1,
+            "prodi_id" => 2,
             "skema_id" => 1,
-            "judul" => "Perancangan Sistem halo Manajemen Rumah Sakit Berbasis Web",
+            "judul" => "Perancangan Sistem Manajemen Rumah Sakit Berbasis Web",
             "rumpun_ilmu" => "Rekayasa Perangkat Lunak",
             "abstrak" => "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti inventore quibusdam reprehenderit fugit dignissimos explicabo, dolor veritatis exercitationem perferendis? Reiciendis, eos aspernatur assumenda fugiat molestiae ducimus dicta ab iste, voluptate obcaecati perspiciatis dignissimos nemo enim eum repudiandae vitae, delectus quas harum ullam iusto repellat sed aut maiores aperiam. Quas, aut?",
             "keyword" => "Kepuasan",
@@ -88,7 +97,7 @@ class DatabaseSeeder extends Seeder
             "tahun" => Carbon::parse('2020-01-10')->format('Y'),
         ]);
         Penelitian::create([
-            // "dosen_id" => 1,
+            "prodi_id" => 1,
             "skema_id" => 2,
             "judul" => "Rancang Bangun Aplikasi Alat Musik Kolintang Menggunakan Augmented Reality Berbasis Android",
             "rumpun_ilmu" => "Rekayasa Perangkat Lunak",
@@ -106,7 +115,7 @@ class DatabaseSeeder extends Seeder
             "tahun" => Carbon::parse('2019-01-10')->format('Y'),
         ]);
         Penelitian::create([
-            // "dosen_id" => 2,
+            "prodi_id" => 2,
             "skema_id" => 3,
             "judul" => "Pemetaan Daerah Ancaman Tanah Longsor di Kota Manado",
             "rumpun_ilmu" => "Rekayasa Perangkat Lunak",
@@ -124,7 +133,7 @@ class DatabaseSeeder extends Seeder
             "tahun" => Carbon::parse('2021-01-10')->format('Y'),
         ]);
         Penelitian::create([
-            // "dosen_id" => 2,
+            "prodi_id" => 2,
             "skema_id" => 4,
             "judul" => "Rancang Bangun Aplikasi Bimbingan Dosen Wali Secara Online",
             "rumpun_ilmu" => "Rekayasa Perangkat Lunak",
@@ -142,7 +151,7 @@ class DatabaseSeeder extends Seeder
             "tahun" => Carbon::parse('2022-01-10')->format('Y'),
         ]);
         Penelitian::create([
-            // "dosen_id" => 3,
+            "prodi_id" => 2,
             "skema_id" => 1,
             "judul" => "Alat Peraga Digital Pengenalan Pahlawan Sulawesi Utara",
             "rumpun_ilmu" => "Rekayasa Perangkat Lunak",
@@ -160,7 +169,7 @@ class DatabaseSeeder extends Seeder
             "tahun" => Carbon::parse('2019-01-10')->format('Y'),
         ]);
         Penelitian::create([
-            // "dosen_id" => 3,
+            "prodi_id" => 1,
             "skema_id" => 1,
             "judul" => "Perancangan Aplikasi Web Berbasis Usability",
             "rumpun_ilmu" => "Rekayasa Perangkat Lunak",
@@ -178,7 +187,7 @@ class DatabaseSeeder extends Seeder
             "tahun" => Carbon::parse('2020-01-12')->format('Y'),
         ]);
         Penelitian::create([
-            // "dosen_id" => 1,
+            "prodi_id" => 1,
             "skema_id" => 2,
             "judul" => "Aplikasi Agenda Berbasis Android Dengan Fitur Push Notification Dan Reminder",
             "rumpun_ilmu" => "Rekayasa Perangkat Lunak",
@@ -197,6 +206,7 @@ class DatabaseSeeder extends Seeder
         ]);
         Penelitian::create([
             // "dosen_id" => 2,
+            "prodi_id" => 1,
             "skema_id" => 3,
             "judul" => "Mendeteksi Keakuratan Metode Noise Salt And Pepper Dengan Median Filter",
             "rumpun_ilmu" => "Rekayasa Perangkat Lunak",
@@ -215,6 +225,7 @@ class DatabaseSeeder extends Seeder
         ]);
         Penelitian::create([
             // "dosen_id" => 3,
+            "prodi_id" => 1,
             "skema_id" => 1,
             "judul" => "Pengembangan Aplikasi Modul Pembelajaran Desain Grafis Berbasis Android",
             "rumpun_ilmu" => "Rekayasa Perangkat Lunak",
@@ -233,6 +244,7 @@ class DatabaseSeeder extends Seeder
         ]);
         Penelitian::create([
             // "dosen_id" => 1,
+            "prodi_id" => 1,
             "skema_id" => 2,
             "judul" => "Penerapan Metode Jaringan Syaraf Tiruan Pada Sistem Deteksi Citra Darah Manusia",
             "rumpun_ilmu" => "Rekayasa Perangkat Lunak",
@@ -251,6 +263,7 @@ class DatabaseSeeder extends Seeder
         ]);
         Penelitian::create([
             // "dosen_id" => 2,
+            "prodi_id" => 1,
             "skema_id" => 3,
             "judul" => "Sistem Informasi Pemasaran Rumah Berbasis Web Gis",
             "rumpun_ilmu" => "Rekayasa Perangkat Lunak",

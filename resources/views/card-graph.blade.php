@@ -19,30 +19,59 @@
   <!--First slide-->
   <div class="carousel-item active">
   
-    <div class="col-md-4" style="float:left">
-     <div class="card mb-2">
-        <div class="card-header bg-white">
-          <center><h2 style="color: #05445E"><i class="fa fa-folder-open me-2"></i>Tahun 2020</h2></center>
-        </div>
-        <div class="card-body">
-          <p style="text-align: start">Total Penelitian: 45</p>
-          <div class="table-responsive">
-            <table class="table table-bordered">
-              <tbody>
-                <tr>
-                  <td >Dasar: 12</td>
-                  <td>Terapan: 8</td>
-                  <td>Unggulan: 4</td>
-                  <td>PLP: 21</td>
-                </tr>
-              </tbody>
-            </table>
-          </div> 
+    @foreach ($datas as $data)
+
+
+      <div class="col-md-4" style="float:left">
+      <div class="card mb-2">
+          <div class="card-header bg-white">
+            <center><h2 style="color: #05445E"><i class="fa fa-folder-open me-2"></i>Tahun {{ $data->tahun }}</h2></center>
+          </div>
+          <div class="card-body">
+            <p style="text-align: start">Total Penelitian: {{ $data->jumlah_penelitian }} </p>
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <tbody>
+                  <tr>
+                    <td >Dasar : 
+                      @foreach ($dasar as $item)
+                        @if ($item->tahun == $data->tahun)
+                            {{ $item->total  }}
+                        @endif
+                      @endforeach
+                    </td>
+                    <td>Terapan: 
+                      @foreach ($terapan as $item)
+                        @if ($item->tahun == $data->tahun)
+                            {{ $item->total  }}
+                        @endif
+                      @endforeach
+                    </td>
+                    <td>Unggulan: 
+                      @foreach ($unggulan as $item)
+                          @if ($item->tahun == $data->tahun)
+                              {{ $item->total  }}
+                          @endif
+                      @endforeach
+                    </td>
+                    <td>PLP:
+                      @foreach ($plp as $item)
+                        @if ($item->tahun == $data->tahun)
+                            {{ $item->total }}
+                        @endif
+                      @endforeach
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div> 
+          </div>
         </div>
       </div>
-    </div>
+    @endforeach
+
   
-    <div class="col-md-4" style="float:left">
+    {{-- <div class="col-md-4" style="float:left">
       <div class="card mb-2">
          <div class="card-header bg-white">
            <center><h2 style="color: #05445E"><i class="fa fa-folder-open me-2"></i>Tahun 2020</h2></center>
@@ -161,7 +190,7 @@
            </div> 
          </div>
        </div>
-     </div>
+     </div> --}}
   
   </div>
   <!--/.Second slide-->

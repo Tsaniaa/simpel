@@ -15,7 +15,7 @@ class DashboardPenelitianController extends Controller
         return view('data', [
             "title" => "Data Penelitian",
             "name" => "Tsania Ursila Razani",
-            "penelitians" => Penelitian::all(),
+            "penelitians" => Penelitian::with(['skema', 'dosen'])->latest()->get(),
             "email" => "tsaniashella@it.student.pens.ac.id"
         ]);
     }
@@ -25,38 +25,10 @@ class DashboardPenelitianController extends Controller
         return view('detailData', [
             "title" => $penelitian->judul,
             "name" => "Tsania Ursila Razani",
-            "penelitian" => $penelitian,
+            "penelitian" => $penelitian->load(['skema', 'dosen']),
             "email" => "tsaniashella@it.student.pens.ac.id"
         ]);
     }
 
-    public function graphic()
-    {
-        $data = Penelitian::select(DB::raw('count(*) as jumlah_penelitian, tahun'))
-            ->groupBy('tahun')->get();
-        $jumlah = Penelitian::count();
 
-        return view('home', [
-            "title" => "Beranda",
-            "datas" => $data,
-            "jumlah" => $jumlah,
-            "name" => "Tsania Ursila Razani",
-            "email" => "tsaniashella@it.student.pens.ac.id"
-        ]);
-    }
-
-    public function pieGraphic()
-    {
-        $data = Penelitian::select(DB::raw('count(*) as jumlah_penelitian, tahun'))
-            ->groupBy('tahun')->get();
-        $jumlah = Penelitian::count();
-
-        return view('pie', [
-            "title" => "Beranda",
-            "datas" => $data,
-            "jumlah" => $jumlah,
-            "name" => "Tsania Ursila Razani",
-            "email" => "tsaniashella@it.student.pens.ac.id"
-        ]);
-    }
 }

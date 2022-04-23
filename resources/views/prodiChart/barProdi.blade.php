@@ -1,19 +1,25 @@
-{{-- convert data ke array --}}
-<button class="btn-info"><a href="/pie"><i class="fa fa-pie-chart me-2"></i>Pie chart</a></button>
-<button class="btn-info"><a href="/barProdi"><i class="fa fa-pie-chart me-2"></i>grafik prodi</a></button>
+@extends('layouts.mainProdi')
+@section('chartProdi')
+
+<button class="btn-info"><a href="/pieProdi"><i class="fa fa-pie-chart me-2"></i>Pie chart</a></button>
+<button class="btn-info"><a href="/"><i class="fa fa-pie-chart me-2"></i>grafik tahun</a></button>
 <div class="shadow1">
     <div class="content"> 
         <center><div class="col-8">
-        <?php 
-            $jml = array();
-            $thn = array();
-            foreach ($datas as $data ) {
-                array_push($jml, $data->jumlah_penelitian);
-                array_push($thn, $data->tahun);
-            }
-            array_push($jml,0);
 
-        ?>
+            <?php 
+                $jml = array();
+                $prodi = array();
+                foreach ($dataProdi as $data ) {
+                    array_push($jml, $data->jumlah);
+                }
+                foreach ($prodis as $data ) {
+                    array_push($prodi, $data->nama);
+                }
+
+            ?>
+
+
 
         {{-- Start buat Bar chart --}}
 
@@ -26,8 +32,9 @@
 
             {{-- proses --}}
             <script>
-                const labels = <?php echo json_encode($thn); ?>;
                 const jumlah = <?php echo json_encode($jml); ?>;
+                const labels = <?php echo json_encode($prodi); ?>;
+
                 Chart.defaults.font.size = 15;
 
                 // Mengatur data beserta Tampilannya
@@ -57,10 +64,15 @@
                     }
                 };
 
+                
+
                 const myChart = new Chart(
                     document.getElementById('myChart'),
                     config
                 );
+
             </script>
     </div>
 </div>
+
+@endsection

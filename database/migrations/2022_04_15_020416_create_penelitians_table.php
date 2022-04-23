@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('penelitians', function (Blueprint $table) {
             $table->id();
-            // $table->foreignId('dosen_id');
+            $table->foreignId('prodi_id');
             $table->foreignId('skema_id');
             $table->string('judul');
             $table->string('rumpun_ilmu');
