@@ -13,8 +13,8 @@
                     <table class="table">
                         <tbody>
                             <tr>
-                              <td class="col-2">14 Februari 2022</td>
-                              <td class="col-10">No. Surat: 0054/E5/AK.</td>
+                              <td class="col-3" style="background-color: orange">14 Februari 2022</td>
+                              <td class="col-9">No. Surat: 0054/E5/AK.</td>
                             </tr>
                             <tr>
                               <td colspan="2">
@@ -24,7 +24,7 @@
                               </td>
                             </tr>
                             <tr>
-                              <td class="col-2">14 Februari 2022</td>
+                              <td class="col-2" style="background-color: orange">14 Februari 2022</td>
                               <td class="col-10">No. Surat: 0054/E5/AK.</td>
                             </tr>
                             <tr>

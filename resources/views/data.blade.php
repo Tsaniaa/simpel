@@ -45,7 +45,7 @@
                                     <tr>
                                         <td> {{ $nomer++ }} </td>
                                         <td>{{ $penelitian->judul }}</td>                                        
-                                        <td><div class="btn btn-sm" style="background-color:{{ $border }}; color: white; font-weight: bold;">{{ $penelitian->skema->nama }}</div></td>
+                                        <td><div class="btn btn-sm" style="background-color:{{ $border }}; color: white; font-weight: bold; cursor: default;">{{ $penelitian->skema->nama }}</div></td>
                                         <td>
                                           <ul>
                                             @foreach ($penelitian->dosen as $dosen)

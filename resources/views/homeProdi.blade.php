@@ -16,19 +16,17 @@
                 </div>
             </div>
             <div class="card-body">
-                <button class="btn-info"><a href="\"><i class="fa fa-bar-chart me-2"></i>Bar Chart</a></button>
-                <button class="btn-info"><a href="\pieYear"><i class="fa fa-pie-chart me-2"></i>Pie Chart</a></button>
+                <button class="btn-info"><a href="\barProdi"><i class="fa fa-bar-chart me-2"></i>Bar Chart</a></button>
+                <button class="btn-info"><a href="\pieProdi"><i class="fa fa-pie-chart me-2"></i>Pie Chart</a></button>
                 <div class="shadow1">
                     <div class="content"> 
-                        @yield('chartTahun')
+                        @yield('chartProdi')
                     </div>
                 </div>
             </div>
             <p class="card-text">*total penelitian masuk tahun {{ $tahun_min->tahun }} hingga saat ini = {{ $jumlah }}</p>
         </div>
     </div>
-    @include('yearChart.cardYear')
-</div>
-
+@include('prodiChart.cardProdi')
 
 @endsection

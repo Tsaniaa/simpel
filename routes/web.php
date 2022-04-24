@@ -16,7 +16,7 @@ use App\Http\Controllers\DashboardPenelitianController;
 */
 
 Route::get('/', [DashboardChartController::class, 'graphic']);
-Route::get('/pie', [DashboardChartController::class, 'pieGraphic']);
+Route::get('/pieYear', [DashboardChartController::class, 'pieGraphic']);
 Route::get('/barProdi', [DashboardChartController::class, 'barChartProdi']);
 Route::get('/pieProdi', [DashboardChartController::class, 'pieChartProdi']);
 

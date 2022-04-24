@@ -25,7 +25,7 @@ class DashboardChartController extends Controller
 
 
 
-        return view('home', [
+        return view('yearChart.barYear', [
             "title" => "Beranda",
             "datas" => $data,
             "tahun_min" => $tahun->min(),
@@ -50,7 +50,7 @@ class DashboardChartController extends Controller
         $unggulan = Penelitian::with(['skema'])->select(DB::raw('count(*) as total,tahun'))->groupBy('tahun')->where('skema_id', 3)->get();
         $plp = Penelitian::with(['skema'])->select(DB::raw('count(*) as total,tahun'))->groupBy('tahun')->where('skema_id', 4)->get();
 
-        return view('pie', [
+        return view('yearChart.pieYear', [
             "title" => "Beranda",
             "datas" => $data,
             "tahun_min" => $tahun->min(),

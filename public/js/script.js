@@ -1,10 +1,3 @@
-// $(document).ready(function () {
-//     $('#dtBasicExample').DataTable();
-//     $('.dataTables_length').addClass('bs-select');
-//   });
-
-//   $('#sortTable').DataTable();
-
 $(document).ready(function () {
   $('#dtOrderExample').DataTable({
     "order": [[ 3, "desc" ]]
@@ -24,43 +17,31 @@ $(document).ready(function () {
     document.getElementById("main").style.marginLeft= "0";
   }
 
-  // animasi carousel card beranda
-  (function ($) {
-    "use strict";
-    // Auto-scroll
-    $('#myCarousel').carousel({
-      interval: 5000
-    });
-  
-    // Control buttons
-    $('.next').click(function () {
-      $('.carousel').carousel('next');
-      return false;
-    });
-    $('.prev').click(function () {
-      $('.carousel').carousel('prev');
-      return false;
-    });
-  
-    // On carousel scroll
-    $("#myCarousel").on("slide.bs.carousel", function (e) {
-      var $e = $(e.relatedTarget);
-      var idx = $e.index();
-      var itemsPerSlide = 3;
-      var totalItems = $(".carousel-item").length;
-      if (idx >= totalItems - (itemsPerSlide - 1)) {
-        var it = itemsPerSlide -
-            (totalItems - idx);
-        for (var i = 0; i < it; i++) {
-          // append slides to end 
-          if (e.direction == "left") {
-            $(
-              ".carousel-item").eq(i).appendTo(".carousel-inner");
-          } else {
-            $(".carousel-item").eq(0).appendTo(".carousel-inner");
-          }
-        }
-      }
-    });
-  })
-  (jQuery);
+  // animasi card beranda
+  const slider = document.querySelector('.list-x');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener('mousedown', (e) => {
+  isDown = true;
+  slider.classList.add('active');
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
+slider.addEventListener('mouseleave', () => {
+  isDown = false;
+  slider.classList.remove('active');
+});
+slider.addEventListener('mouseup', () => {
+  isDown = false;
+  slider.classList.remove('active');
+});
+slider.addEventListener('mousemove', (e) => {
+  if(!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const walk = (x - startX) * 3; //scroll-fast
+  slider.scrollLeft = scrollLeft - walk;
+  console.log(walk);
+});

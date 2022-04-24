@@ -3,12 +3,12 @@
 @section('content')
 <div class="row mt-4 mb-4">
     <div class="col-md-12">
-        <div class="table-responsive">
+        <div class="table-responsive" >
         <table class="table table-bordered">
             <thead>
-                <tr style="background-color: #189AB4; color: #05445E">
+                <tr style="color: #D4F1F4; background-color: #05445E">
                     <th>Skema</th>
-                    <th>Dosen</th>
+                    <th>Dosen / Group Dosen</th>
                     <th>Group Riset</th>
                     <th>Tahun</th>
                     <th>Lama Penelitian</th>
@@ -17,26 +17,26 @@
             </thead>
             <tbody>
                 <tr style="background-color: #D4F1F4;">
-                    <td>{{ $penelitian->skema->nama }}</td>
-                    <td>
+                    <td class="table-active">{{ $penelitian->skema->nama }}</td>
+                    <td class="table-active">
                         <ul>
                             @foreach ($penelitian->dosen as $dosen)
                                 <li>{{ $dosen->nama }}</li>
                             @endforeach
                         </ul>
-                    </td>
+                    </td class="table-active">
                     {{-- <td>{{ $penelitian->dosen->nama }}</td> --}}
-                    <td>{{ $penelitian->grp_riset }}</td>
-                    <td>{{ $penelitian->tahun }}</td>
-                    <td>{{ $penelitian->lama_kgtn }}</td>
-                    <td>{{ $penelitian->thn_pekerjaan }}</td>
+                    <td class="table-active">{{ $penelitian->grp_riset }}</td>
+                    <td class="table-active">{{ $penelitian->tahun }}</td>
+                    <td class="table-active">{{ $penelitian->lama_kgtn }}</td>
+                    <td class="table-active">{{ $penelitian->thn_pekerjaan }}</td>
                 </tr>               
             </tbody>
         </table>
         </div>
-        <table class="table table-bordered">
+        <table class="table table-bordered" style="background-color: #D4F1F4; color:#05445E">
             <tbody>
-                <tr><td colspan="2" style="background-color: #189AB4; color: #05445E"><center><b>{{ $penelitian->judul }}</b></center></td></tr>
+                <tr><td colspan="2" style="background-color: #05445E"></td></tr>
                 <tr>
                     <td class="table-active"><b>judul</b></td>
                     <td>{{ $penelitian->judul }}</td>
@@ -69,6 +69,7 @@
                     <td class="table-active"><b>Metode</b></td>
                     <td>{{ $penelitian->metode }}</td>
                 </tr> 
+                <tr><td colspan="2" style="background-color: #05445E"></td></tr>
             </tbody>
         </table>
         <button class="btn-info me-2"><a href="/data"><i class="fa fa-arrow-left"></i> kembali</a></button>
