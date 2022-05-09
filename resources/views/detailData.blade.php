@@ -1,8 +1,9 @@
 @extends('layouts.main')
 
 @section('content')
-<div class="row mt-4 mb-4">
+<div class="row mt-2 mb-2">
     <div class="col-md-12">
+        <a href="/data" class="btn btn-success me-2 mb-3 "><i class="fa fa-arrow-left"></i> kembali</a>
         <div class="table-responsive" >
         <table class="table table-bordered">
             <thead>
@@ -72,7 +73,7 @@
                 <tr><td colspan="2" style="background-color: #05445E"></td></tr>
             </tbody>
         </table>
-        <button class="btn-info me-2"><a href="/data"><i class="fa fa-arrow-left"></i> kembali</a></button>
+        
         {{-- <button class="btn-info"><a href="#"><i class="fa fa-download"></i> download abstract </a></button> --}}
     </div>
 </div>

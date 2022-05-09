@@ -24,6 +24,8 @@ Route::get('/pieProdi', [DashboardChartController::class, 'pieChartProdi']);
 Route::get('/data', [DashboardPenelitianController::class, 'index']);
 Route::get('/data/{penelitian:id}', [DashboardPenelitianController::class, 'show']);
 
+Route::get('/dataprodi', [DashboardPenelitianController::class, 'prodibased']);
+Route::get('/dataprodi/{penelitian:prodi_id}', [DashboardPenelitianController::class, 'prodibasedData']);
 
 
 
@@ -31,6 +33,22 @@ Route::get('/data/{penelitian:id}', [DashboardPenelitianController::class, 'show
 Route::get('/pengumuman', function () {
     return view('announcement', [
         "title" => "Pengumuman",
+        "name" => "Tsania Ursila Razani",
+        "email" => "tsaniashella@it.student.pens.ac.id"
+    ]);
+});
+
+Route::get('/login', function () {
+    return view('login', [
+        "title" => "Masuk",
+        "name" => "Tsania Ursila Razani",
+        "email" => "tsaniashella@it.student.pens.ac.id"
+    ]);
+});
+
+Route::get('/register', function () {
+    return view('register', [
+        "title" => "Daftar",
         "name" => "Tsania Ursila Razani",
         "email" => "tsaniashella@it.student.pens.ac.id"
     ]);

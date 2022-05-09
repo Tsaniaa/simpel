@@ -1,7 +1,8 @@
 @extends('layouts.main')
 
 @section('content')
-<div class="row mt-4 mb-4">
+<button class="openbtn" onclick="openNav()">☰ Tampilkan Menu</button>
+<div class="row mt-2 mb-4">
     <div class="col-md-12">
         <div class="card border-0 shadow rounded">
             <div class="card-header">
@@ -20,7 +21,7 @@
                               <td colspan="2">
                                 <h5>Program penelitian Lanjutan (On Going)</h5>
                                 <p>P3M telah menyatakan bahwa... <a href="#">buka selengkapnya</a></p>
-                                <button class="btn-info mb-4"><a href="#"><i class="fa fa-file-pdf-o"></i> download abstract </a></button>
+                                <a href="#" class="btn btn-success mb-3" role="button"><i class="fa fa-file-pdf-o me-2"></i>Download</a>
                               </td>
                             </tr>
                             <tr>
@@ -31,7 +32,7 @@
                               <td colspan="2">
                                 <h5>Program penelitian Lanjutan (On Going)</h5>
                                 <p>P3M telah menyatakan bahwa... <a href="#">buka selengkapnya</a></p>
-                                <button class="btn-info mb-4"><a href="#"><i class="fa fa-file-pdf-o"></i> download abstract </a></button>
+                                <a href="#" class="btn btn-success mb-3" role="button"><i class="fa fa-file-pdf-o me-2"></i>Download</a>
                               </td>
                             </tr>
                         </tbody>

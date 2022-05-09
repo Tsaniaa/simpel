@@ -4,12 +4,12 @@
     <div style="float:left">
       <div class="card">
           <div class="card-header" style="border-block-color: white">
-            <center><h2 style="color: white"><i class="fa fa-folder-open me-2"></i>Tahun {{ $data->tahun }}</h2></center>
+            <center><h2><i class="fa fa-folder-open me-2"></i>Tahun {{ $data->tahun }}</h2></center>
           </div>
           <div class="card-body">
             <p style="text-align: start">Total Penelitian: {{ $data->jumlah_penelitian }} </p>
             <div class="table-responsive">
-              <table class="table table-bordered" style="border-block-color: white">
+              <table class="table table-bordered" style="border-block-color: white; color: #05445E;">
                 <tbody>
                   <tr>
                     <td >Dasar : 

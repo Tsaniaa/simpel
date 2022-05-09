@@ -75,8 +75,9 @@ class DashboardChartController extends Controller
         $terapan = Penelitian::with(['skema'])->select(DB::raw('count(*) as total,prodi_id'))->groupBy('prodi_id')->where('skema_id', 2)->get();
         $unggulan = Penelitian::with(['skema'])->select(DB::raw('count(*) as total,prodi_id'))->groupBy('prodi_id')->where('skema_id', 3)->get();
         $plp = Penelitian::with(['skema'])->select(DB::raw('count(*) as total,prodi_id'))->groupBy('prodi_id')->where('skema_id', 4)->get();
-        // dd($dasar);
 
+
+        
         return view('prodiChart.barProdi', [
             "title" => "Beranda",
             "dataProdi" => $dataProdi,

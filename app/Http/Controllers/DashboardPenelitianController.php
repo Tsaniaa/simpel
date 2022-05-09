@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Carbon\Carbon;
+use App\Models\Prodi;
 use App\Models\Penelitian;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -30,5 +31,33 @@ class DashboardPenelitianController extends Controller
         ]);
     }
 
+    public function prodibasedData(Penelitian $penelitian)
+    {
+        $penelitians = Penelitian::with(['skema', 'dosen'])->where('prodi_id', $penelitian->prodi_id)->latest()->get();
+        $prodi = Prodi::where('id', $penelitian->prodi_id)->get()[0];
 
+
+
+        return view('datadiv.dataProdi', [
+            "title" => "Data Penelitian  " . $prodi->nama,
+            "name" => "Tsania Ursila Razani",
+            "penelitians" => $penelitians,
+            "email" => "tsaniashella@it.student.pens.ac.id"
+        ]);
+    }
+
+    public function prodibased()
+    {
+        $penelitians = Penelitian::select(DB::raw('count(*) as jumlah, prodi_id'))->groupBy('prodi_id')->get();
+        $prodi = Prodi::all();
+
+
+        return view('datadiv.prodibased', [
+            "title" => "Data Penelitian",
+            "name" => "Tsania Ursila Razani",
+            "penelitians" => $penelitians,
+            "prodis" => $prodi,
+            "email" => "tsaniashella@it.student.pens.ac.id"
+        ]);
+    }
 }
